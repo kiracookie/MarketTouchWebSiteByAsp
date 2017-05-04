@@ -1,0 +1,1 @@
+{{aspcms:content sort={aspcms:topsortid} order=time num=1}"id":"[content:id]", "title":"[content:title]", "date":"[content:date style=yy-m-d]", "des":"[content:desc]", "link":"[content:link]"{/aspcms:content}}

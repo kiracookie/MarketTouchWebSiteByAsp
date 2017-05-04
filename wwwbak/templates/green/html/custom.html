@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<title>申请使用-{aspcms:sitetitle}</title>
+<meta name="Keywords" content="{aspcms:sortkeyword}" >
+<meta name="generator" content="ASPCMS! V2" />
+    {aspcms:template src=head-nei.html}
+<!-- 边栏悬浮 -->
+    {aspcms:template src=left.html}
+<div class="warp-container">
+    <div class="index-mainbody">
+        <div class="content">
+            <div class="position">
+                 您现在的位置：<a href="{aspcms:sitepath}{aspcms:languagepath}">首页</a>{aspcms:position} > [position:link]{/aspcms:position}&#160;&#187;&#160;
+            </div>
+            <div class="info_content">
+<form action="/custom/save.asp?action=add" method="post">
+            <table style="BORDER-RIGHT: 1px dotted; BORDER: 1px dotted;position: relative;width:100%;">
+                <tbody>
+               <tr><Td colspan="2"></td></tr>
+               <tr width="30%">
+                    <th align="right">
+                        <label for="yonghuming">用户名：</label>
+                    </th>
+                    <td width="70%">                 
+                        <input name="yonghuming" id="yonghuming" style="width:200px;">
+                        <span style="color:red;">注：不允许使用保留名称，如admin\adminitrator等用户名</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="right">
+                        <label for="gongsimingcheng">公司名称：</label>
+                    </th>
+                    <td>
+                        <input name="gongsimingcheng" id="gongsimingcheng" type="text" style="width:200px;">
+                        <span style="color:red;">注：请填写营业执照公司全称，否则可能引起试用失败</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="right">
+                        <label for="lianxiren">联系人：</label>
+                    </th>
+                    <td>
+                        <input name="lianxiren" id="lianxiren" type="text" style="width:200px;">
+                        <span style="color:red;">注：请填写账户维护管理人姓名</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="right">
+                        <label for="yidongdianhua">移动电话：</label>
+                    </th>
+                    <td>
+                        <input name="yidongdianhua" id="yidongdianhua" type="text" style="width:200px;">
+                        <span style="color:red;">注：请填写真实的手机或座机号码，否则可能引起试用失败</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="right">
+                        <label for="qqhaoma">QQ号码：</label>
+                    </th>
+                    <td>
+                        <input name="qqhaoma" id="qqhaoma" type="text" style="width:200px;">
+                        <span style="color:red;">注：请填写真实的QQ号码，以方便客服及时提供技术指导</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="right">
+                        <label for="lianxixinxiang">联系信箱：</label>
+                    </th>
+                    <td>
+                        <input name="lianxixinxiang" id="lianxixinxiang" type="text" style="width:200px;">
+                        <span style="color:red;">注：请填写真实的信箱地址，否则无法成功接受开户信息邮件提示</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="right">
+                        <label for="myyzm">验证码：</label>
+                    </th>
+                    <td>
+                        <input name="code" id="myyzm" class="myinput yzm" type="text" value="" maxlength="4" style="ime-mode:disabled;"><a onClick="SeedImg.src='/{aspcms:sitepath}inc/checkcode.asp'"><img src="/{aspcms:sitepath}inc/checkcode.asp" id="SeedImg" align="absmiddle" style="cursor:pointer;" border="0" /></a>
+                                            </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input id="zhucebtn" type="submit" name="Submit" value="【我已经同意服务协议】   点击申请试用">
+                    </td>
+                </tr>
+            </tbody></table>
+            </form>
+<br>
+            <table style="BORDER-RIGHT: 1px dotted; BORDER: 1px dotted;position: relative;width:100%;">
+              <tr><td>
+              <p>一》不懂得如何使用？请联系我们；</p>
+              <p>二》不知道软件是否有效，请联系我们；</p>
+              <p>三》感觉效果不错，想代理扩张市场，请查阅，关于代理理多利益咨询，请联系在线客服；</p>
+              </td></tr>
+            </table>
+            </div>
+            <div class="pagefoot">
+              
+                <a href="javascript:history.back();" class="page-back">返回</a>
+                
+            </div>
+        </div>
+    </div>
+  
+</div>
+{aspcms:foot}
+</body>
+</html>

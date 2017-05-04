@@ -1,0 +1,27 @@
+a:link, a:visited {color:#666; text-decoration: none; }
+a:hover { text-decoration:underline; color:#31b2ff;}
+ul,li{ list-style:none;}
+.clear { clear: both; }
+.clearfix:after{ content:""; display:block;visibility:hidden; height:0; clear:both;}
+.clearfix {zoom:1;}
+.mb10{ margin-bottom:10px;}
+.mBody{}
+#content {width:960px; margin:0 auto; padding-top:10px; overflow:hidden;zoom:1;}
+.main { float:left; width:193px; }
+.mainBox{ width:618px;padding:0 15px; border:1px solid #e5e5e5; background:#fff;}
+.main ul li { list-style:none; }
+.main .post, .main .left { margin-top:10px; }
+#sidebar { float:right; width:300px;}
+#sidebar li ul {}
+#sidebar li ul li { }
+#sidebar li ul.children li, #sidebar li ul.children li ul li { padding-left: 18px; background: url(images/tier.gif) 6px 5px no-repeat; }
+.indexPicBox{ width:193px; height:146px; padding:0px; border:1px solid #e5e5e5; background:#fff; }
+.hotPic{ width:193px; height:146px; position:relative; overflow:hidden; }
+.hotPic .num{ position:absolute; right:0; bottom:0; z-index:10; width:193px; padding-right:0px; height:30px; text-align:right; }
+.hotPic .num span{ width:20px; height:20px; display:inline-block; line-height:20px; font-size:12px; text-align:center; margin:5px 2px 0; cursor:pointer; background:#222; color:#fff; }
+.hotPic .num span.cur{ color:#fff; background-color: #ce0609; }
+.hotPic .pic{ position:relative; z-index:5;}
+.hotPic .pic li{ position:absolute; display:none;}
+.hotPic .pic li img{ width:193px; height:146px; display:block; }
+.hotPic .text{ position:absolute;bottom:0; left:10px; z-index:12; width:520px;height:30px; line-height:30px; overflow:hidden;font-family:Microsoft YaHei;}
+.hotPic .text p{ position:absolute; display:none; color:#fff; font-weight:800; font-size:15px;}

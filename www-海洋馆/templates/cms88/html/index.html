@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{aspcms:sitetitle}{aspcms:additiontitle}</title>
+<meta name="Keywords" content="{aspcms:sitekeywords}" >
+<meta name="Description" content="{aspcms:sitedesc}" >
+<link type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/base.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/slider.css" />
+<LINK rel=stylesheet type=text/css href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/lrtk.css">
+<script type="text/javascript" src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.min.js"></script>
+<SCRIPT type=text/javascript charset=utf-8 src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/lrscroll.js"></SCRIPT>
+<script type="text/javascript">
+//焦点图
+$(function(){
+	var sw = 0;
+	$(".hotPic .num span").mouseover(function(){
+		sw = $(".hotPic .num span").index(this);
+		myShow(sw);
+	});
+	function myShow(i){
+		$(".hotPic .num span").eq(i).addClass("cur").siblings("span").removeClass("cur");
+		$(".hotPic .pic li").eq(i).stop(true,true).fadeIn(600).siblings("li").fadeOut(600);
+		//$(".hotPic .text p").eq(i).show().siblings("p").hide();
+	}
+	//滑入停止动画，滑出开始动画
+	$(".hotPic").hover(function(){
+		if(myTime){
+		   clearInterval(myTime);
+		}
+	},function(){
+		myTime = setInterval(function(){
+		  myShow(sw)
+		  sw++;
+		  if(sw==$(".hotPic .pic li").length){sw=0;}
+		} , 3000);
+	});
+	//自动开始
+	var myTime = setInterval(function(){
+	   myShow(sw)
+	   sw++;
+	   if(sw==$(".hotPic .pic li").length){sw=0;}
+	} , 3000);
+})
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+</head>
+<body>
+<div class="wrap">
+ {aspcms:top}
+  <div class="mid">
+    <div class="banner"> <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/banner.jpg" width="990" height="277" /></div>
+    <div class="left">
+      <div  class="leftin">
+        <div class="lb">
+          <div class="t1"> <em>推荐新闻</em><span>News</span> </div>
+          <div class="flash">
+            <div class="mBody">
+              <div id="content">
+                <div class="main">
+                  <div class="indexPicBox mb10">
+                    <div class="hotPic">
+                      <div class="num"> <span class="cur">1</span><span>2</span><span>3</span></div>
+                      <ul class="pic">
+					  {aspcms:content sort=1 num=3 order=isrecommend} 
+                    <li style="display:block;"> <a title="[content:title]" href="[content:link]" target="_blank"> <img src="[content:pic]" /></a></li>
+                      {/aspcms:content}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lb">
+          <div class="t1">{aspcms:type sort=19}<em>[type:name]</em><span>[type:enname]</span> {/aspcms:type}</div>
+          <div class="cate">
+            <ul>
+			 {aspcms:navlist type=19} 
+              <li><A href="[navlist:link]" title="[navlist:name]">[navlist:name]</A></li>
+            {/aspcms:navlist}
+            </ul>
+          </div>
+        </div>
+        <div class="lb">
+		<a href="/list/?124_1.html"><img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/zt.gif" width="214" height="90"  class="imga"/></a> 
+		<a href="/about/?107.html" > <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/lx.gif" width="213" height="72" class="imga"/></a> 
+		</div>
+        <div class="lb fl">
+          <select name="" onChange="javascript:window.open(this.options[this.selectedIndex].value)">
+            <option>友情链接</option>
+			{aspcms:linklist  type=font}
+			<option value="[linklist:link]">[linklist:name]</option>
+			{/aspcms:linklist}
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="lb">
+        <div class="newslist">
+   <div class="t2">{aspcms:type sort=1}<em>[type:name]</em><span>[type:enname]</span><a href="[type:link]" class="more">更多</a>{/aspcms:type}</div>
+          <ul>
+		  {aspcms:content sort=1 num=6 order=order}  
+          <li><a href="[content:link]">[content:title]</a></li>
+          {/aspcms:content} 
+          </ul>
+        </div>
+        <div class="newslist">
+   <div class="t2">{aspcms:type sort=19}<em>[type:name]</em><span>[type:enname]</span><a href="[type:link]" class="more">更多</a>{/aspcms:type}</div>
+          <div class="about">{aspcms:about sort=115 len=250 }[about:info len=150]{/aspcms:about} </div>
+        </div>
+      </div>
+      <div class="lb">
+  <div class="t1">{aspcms:type sort=121}<em>[type:name]</em><span>[type:enname]</span><a href="[type:link]" class="more2">more</a>{/aspcms:type}</div>
+        <DIV id=featureContainer>
+          <DIV id=feature>
+            <DIV id=block>
+              <DIV id=botton-scroll>
+                <UL class=featureUL>
+			    {aspcms:content sort=121 num=20 order=order} 
+                  <LI class=featureBox>
+                 <DIV class=box><A href="[content:link]" target="_blank"><IMG alt=Paracletos  src="[content:pic]" width=150 height=108> </A></DIV>
+                    <!-- /box -->
+                  </LI>
+				{/aspcms:content}  
+                
+                </UL>
+              </DIV>
+              <!-- /botton-scroll -->
+            </DIV>
+            <!-- /block -->
+            <A class=prev href="javascript:void();">Previous</A><A class=next 
+href="javascript:void();">Next</A> </DIV>
+          <!-- /feature -->
+        </DIV>
+      </div>
+      <div class="lb">
+        <div class="newslist">
+  <div class="t2">{aspcms:type sort=111}<em>[type:name]</em><span>[type:enname]</span><a href="[type:link]" class="more">更多</a>{/aspcms:type}</div>
+          <ul>
+		  {aspcms:content sort=111 num=6 order=order}  
+          <li><a href="[content:link]">[content:title]</a></li>
+          {/aspcms:content}
+          </ul>
+        </div>
+        <div class="newslist">
+          <div class="t2">{aspcms:type sort=114}<em>[type:name]</em><span>[type:enname]</span><a href="[type:link]" class="more">更多</a>{/aspcms:type}</div>
+          <ul>
+           {aspcms:content sort=114 num=6 order=order}  
+          <li><a href="[content:link]">[content:title]</a></li>
+          {/aspcms:content}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+{aspcms:foot}
+</div>
+</body>
+</html>

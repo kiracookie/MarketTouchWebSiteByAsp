@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>{aspcms:sorttitle}-{aspcms:sitetitle}</title>
+<meta name="Keywords" content="{aspcms:sortkeyword}" >
+<meta name="Description" content="{aspcms:sortdesc}" >
+    {aspcms:template src=head-nei.html}
+<!-- 边栏悬浮 -->
+    {aspcms:template src=left.html}
+<div class="warp-container">
+    <div class="index-mainbody">
+        <div class="content">
+            <div class="position">
+                 您现在的位置：<a href="{aspcms:sitepath}{aspcms:languagepath}">首页</a>{aspcms:position} > [position:link]{/aspcms:position}&#160;&#187;&#160;
+            </div>
+			<ul class="list_content cleafix">
+                        {aspcms:list size=100 order=order}
+                <li class="clearfix lihover">
+                    <a href="[list:link]"><img src="[list:pic]"></a>
+                    <div class="info_article">
+                        <h4><a href="[list:link]">[list:title len=50]</a></h4>
+                        <p>[list:desc len=50]... <span class="more"><a href="[list:link]">查看详细>>></a></span></p>
+                    </div>
+                 </li>                
+                        {/aspcms:list}
+              </ul>
+            <div class="pagefoot">
+              
+                <a href="javascript:history.back();" class="page-back">返回</a>
+                
+            </div>
+        </div>
+    </div>
+  
+</div>
+{aspcms:foot}
+</body>
+</html>

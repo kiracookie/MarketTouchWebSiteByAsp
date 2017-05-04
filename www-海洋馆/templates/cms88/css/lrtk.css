@@ -1,0 +1,17 @@
+.featureBox A IMG { padding: 1px; height: 108px; width: 150px; border: 1px solid #CCC; }
+#featureContainer { BORDER-BOTTOM: #999 0px dotted; BORDER-LEFT: #999 0px dotted; FONT-SIZE: 80%; BORDER-TOP: #999 0px dotted; BORDER-RIGHT: #999 0px dotted; margin-top: 5px; margin-right: auto; margin-bottom: 20px; margin-left: auto; width: 705px; float: left; }
+#wrap { OVERFLOW: hidden }
+#load { BACKGROUND-IMAGE: url(images/loader32x32.gif); BORDER-BOTTOM: #999 0px dotted; BORDER-LEFT: #999 0px dotted; TEXT-INDENT: -9999px; MARGIN: 0px auto; WIDTH: 923px; DISPLAY: none; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center 50%; HEIGHT: 100px; BORDER-TOP: #999 0px dotted; BORDER-RIGHT: #999 0px dotted }
+#feature { POSITION: relative; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; background-image: url(../images/mu.gif); background-repeat: repeat-x; border: 1px dotted #dad9de; background-position: left center; }
+#feature .button { BORDER-BOTTOM: #999 0px dotted; POSITION: absolute; BORDER-LEFT: #999 0px dotted; WIDTH: 840px; BORDER-TOP: #999 0px dotted; TOP: 72px; BORDER-RIGHT: #999 0px dotted; LEFT: 0px }
+#feature .prev { BORDER-BOTTOM: #999 0px dotted; BORDER-LEFT: #999 0px dotted; TEXT-INDENT: -9999px; WIDTH: 22px; DISPLAY: block; FLOAT: left; HEIGHT: 43px; BORDER-TOP: #999 0px dotted; TOP: 60px; BORDER-RIGHT: #999 0px dotted; background-image: url(../images/left.gif); background-position: center top; position: absolute; left: 2px; }
+#feature .next { BORDER-BOTTOM: #999 0px dotted; BORDER-LEFT: #999 0px dotted; TEXT-INDENT: -9999px; WIDTH: 22px; DISPLAY: block; FLOAT: right; HEIGHT: 43px; BORDER-TOP: #999 0px dotted; TOP: 60px; BORDER-RIGHT: #999 0px dotted; background-image: url(../images/right.gif); background-repeat: no-repeat; background-position: center top; position: absolute; right: 2px; }
+#feature .prev:hover { BACKGROUND-POSITION: center bottom }
+#feature .next:hover { BACKGROUND-POSITION: center bottom }
+.featureUL { BORDER-BOTTOM: #000 0px dotted; POSITION: relative; BORDER-LEFT: #000 0px dotted; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 2800px; PADDING-RIGHT: 0px; FLOAT: left; BORDER-TOP: #000 0px dotted; BORDER-RIGHT: #000 0px dotted; PADDING-TOP: 0px; LEFT: 0px }
+.featureBox { BORDER-BOTTOM: #999 0px dotted; BORDER-LEFT: #999 0px dotted; WIDTH: 160px; FLOAT: left; HEIGHT: 112px; OVERFLOW: hidden; BORDER-TOP: #999 0px dotted; BORDER-RIGHT: #999 0px dotted; PADDING-TOP: 23px }
+#botton-scroll { Z-INDEX: 0; BORDER-BOTTOM: #999 0px dotted; BORDER-LEFT: #999 0px dotted; WIDTH: 840px; FLOAT: left; HEIGHT: 140px; BORDER-TOP: #999 0px dotted; BORDER-RIGHT: #999 0px dotted; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; }
+#block { Z-INDEX: 0; BORDER-BOTTOM: #999 0px dotted; POSITION: relative; BORDER-LEFT: #999 0px dotted; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 635px; PADDING-RIGHT: 0px; HEIGHT: 155px; FONT-SIZE: 70%; OVERFLOW: hidden; BORDER-TOP: #999 0px dotted; BORDER-RIGHT: #999 0px dotted; PADDING-TOP: 0px; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; }
+#block .box { BORDER-BOTTOM: #d8d8d8 0px solid; BORDER-LEFT: #d8d8d8 0px solid; WIDTH: 160px; FLOAT: left; HEIGHT: 112px; BORDER-TOP: #d8d8d8 0px solid; BORDER-RIGHT: #d8d8d8 0px solid; padding: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
+#block .box .feature-title { FONT-SIZE: 140%; FONT-WEIGHT: normal }
+#block .box .feature-thumb { WIDTH: 240px; MARGIN-BOTTOM: 5px; FLOAT: left; HEIGHT: 150px }

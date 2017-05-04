@@ -1,0 +1,61 @@
+@charset "utf-8";
+* { font-family: "微软雅黑"; font-size: 12px; font-style: normal; line-height: 25px; text-decoration: none; margin: 0px; padding: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; list-style-type: none; }
+*:focus { outline: none; }
+.t1 { background-image: url(../images/d1.gif); background-repeat: no-repeat; background-position: left center; line-height: 34px; height: 34px; position: relative; }
+.t1 em { color: #000; padding-left: 25px; font-size: 16px; line-height: 34px; }
+.t1 span { color: #5780a8; padding-left: 15px; font-size: 12px; line-height: 34px; }
+.t2 { position: relative; padding-top: 2px; }
+.t2 em { color: #000; padding-left: 40px; font-size: 16px; line-height: 34px; }
+.t2 span { color: #5780a8; padding-left: 15px; font-size: 14px; line-height: 34px; }
+.t2 a.more { color: #758a9b; position: absolute; top: 5px; right: 20px; line-height: 28px; }
+.t1 a.more2 { color: #758a9b; position: absolute; top: 5px; right: 20px; line-height: 28px; background-image: url(../images/d5.gif); background-repeat: no-repeat; background-position: right center; padding-right: 10px; }
+.t2 a.more:hover { color: #F30; }
+
+.lb { overflow: hidden; }
+.lb.fl select{ height: 19px; width: 211px; border: 1px solid #CCC; margin-top: 10px; }
+
+body { background-image: url(../images/bg.gif); background-repeat: repeat; }
+.wrap { margin: auto; width: 990px; overflow: hidden; }
+.wrap .top { }
+.wrap .top .topbanner { background-image: url(../images/top.jpg); height: 124px; width: 990px; position: relative; }
+.wrap .top .topbanner #home { height: 116px; width: 700px; position: absolute; left: 0px; top: 0px; }
+.wrap .top .menu { background-image: url(../images/menubg.gif); background-repeat: repeat-x; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; border-top-style: solid; border-bottom-style: solid; border-top-color: #3e74a3; border-bottom-color: #012d76; height: 40px; width: 100%; }
+.wrap .top .menu ul { height: 40px; width: 690px; display: block; float: left; }
+.wrap .top .menu ul li { text-align: center; background-image: url(../images/li.gif); background-repeat: no-repeat; background-position: left center; float: left; width: 86px; }
+.wrap .top .menu ul li a { font-size: 14px; font-weight: bold; line-height: 40px; color: #FFF; }
+.wrap .top .menu ul li a:hover { color: #F30; text-decoration: none; }
+.wrap .top .menu .search { background-image: url(../images/search.gif); background-repeat: no-repeat; background-position: left top; float: right; height: 40px; width: 300px; }
+.wrap .top .menu .search .key { float: right; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; line-height: 20px; height: 20px; margin-top: 10px; color: #FFF; }
+.wrap .top .menu .search .gosearch { display: block; float: right; height: 40px; width: 45px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; cursor: pointer; background-color: transparent; }
+.wrap .mid { overflow: hidden; background-color: #FFF; }
+.wrap .mid .banner { height: 277px; }
+.wrap .mid .left { background-image: url(../images/leftbg.gif); background-repeat: no-repeat; background-position: left top; width: 251px; overflow: hidden; float: left;  }
+.wrap .mid .left .leftin { padding-left: 17px; background-image: url(../images/leftinbg.gif); background-repeat: repeat-y; background-position: left top; padding-bottom: 20px;min-height:680px; }
+.wrap .mid .left .leftin .flash { background-image: url(../images/flash.gif); height: 170px; width: 213px; background-position: left top; padding-left: 10px; background-repeat: no-repeat; }
+.wrap .mid .left .leftin .cate { background-image: url(../images/cate.gif); height: 219px; width: 213px; }
+.wrap .mid .left .leftin .lb .cate ul { margin: auto; width: 170px; overflow: hidden; padding-top: 20px; }
+.wrap .mid .left .leftin .lb .cate ul li { background-color: #fbfbfb; text-align: center; margin-bottom: 5px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: none; border-right-style: none; border-bottom-style: dashed; border-left-style: none; border-top-color: #CCC; border-right-color: #CCC; border-bottom-color: #CCC; border-left-color: #CCC; }
+.wrap .mid .left .leftin .lb .cate ul li a { color: #000; font-size: 14px; background-image: url(../images/d4.gif); background-repeat: no-repeat; background-position: left center; padding-left: 25px; }
+.wrap .mid .left .leftin .lb .cate ul li a:hover { color: #F60; }
+.wrap .mid .left .leftin .lb .imga { padding-top: 10px; }
+
+.wrap .mid .right { float: left; width: 730px; overflow: hidden; padding-top: 30px; padding-left: 5px; }
+.wrap .mid .right .newslist { background-image: url(../images/libg.gif); height: 210px; width: 340px; float: left; margin-right: 25px; margin-left: 0px; }
+.wrap .mid .right .lb .newslist ul { }
+.wrap .mid .right .lb .newslist ul li { }
+.wrap .mid .right .lb .newslist ul li a { }
+.wrap .mid .right .lb .newslist ul li a:hover { }
+.wrap .mid .right .lb .newslist ul { margin: auto; width: 300px; }
+.wrap .mid .right .lb .newslist ul li { color: #f8fdfe; background-image: url(../images/d3.gif); background-repeat: no-repeat; background-position: left center; background-color: #fafefe; }
+.wrap .mid .right .lb .newslist ul li a { color: #006699; padding-left: 20px; }
+.wrap .mid .right .lb .newslist ul li a:hover { color: #F60; }
+.wrap .mid .right .lb .newslist .about { padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px; }
+.wrap .mid .right .cbox { border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: none; border-bottom-style: none; border-left-style: none; border-top-color: #d9dadf; border-right-color: #d9dadf; border-bottom-color: #d9dadf; border-left-color: #d9dadf; padding-top:px; padding-right: 10px; padding-left: 10px; }
+
+
+
+
+
+.wrap .mid .clear { clear: both; }
+.wrap .foot { background-image: url(../images/footbg.gif); background-repeat: repeat; height: 50px; }
+.wrap .foot p { color: #FFF; text-align: center; line-height: 50px; }

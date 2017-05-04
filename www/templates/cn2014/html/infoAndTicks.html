@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="MSHTML 6.00.3790.4807" name=GENERATOR>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Epic &mdash; Fully Responsive Free HTML5 Bootstrap Website Template by FREEHTML5.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5"/>
+    <meta name="keywords"
+          content="free html5, free template, free bootstrap, website template, html5, css3, mobile first, responsive"/>
+
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Animate -->
+    <link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/animate.css">
+    <!-- Icomoon -->
+    <link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/bootstrap.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/style.css">
+
+    <link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/calendars-style.css">
+
+    <!--<link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/calendars-theme.min.css">-->
+
+    <!-- jQuery -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.min.js"></script>
+
+
+    <!-- jquery.touchSwipe.min.js -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.touchSwipe.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.waypoints.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/main.js"></script>
+
+
+    <!-- Modernizr JS -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/respond.min.js"></script>
+    <![endif]-->
+    <!--倒计时-->
+
+    <script type="text/javascript">
+        //点击跳转回
+        function startMarquee() {
+            $(".item").eq(0).addClass("active");
+            $("#myCarousel").carousel('cycle');
+        }
+        $(function () {
+            $("#myCarousel").swipe({
+
+                swipeLeft: function () {
+                    $(this).carousel('next');
+                },
+
+                swipeRight: function () {
+                    $(this).carousel('prev');
+                },
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+<!-- Loader -->
+<div class="fh5co-loader"></div>
+{aspcms:template src=logoTwo.html}
+<div id="fh5co-main" role="main">
+    <div class="container">
+        {aspcms:navlist num=1 type={aspcms:sortid}}
+        {aspcms:content sort=[navlist:sortid]}
+        <script type="text/javascript">
+            var imagePaths = '[content:imagePath]' ? '[content:imagePath]' : '';
+            var imagePathAr = imagePaths.split('|');
+        </script>
+        {/aspcms:content}
+        {/aspcms:navlist}
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <script type="text/javascript">
+                    for (var i = 0; i < imagePathAr.length; i++) {
+                        document.write('<div class="item"><img src="' + imagePathAr[i] + '"/></div>');
+                    }
+                    startMarquee();
+                </script>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="aboluo-w-700">
+    <div class="aboluo-leftdiv">
+        <div class="aboluo-tools">
+            <div class="aboluo-calendar-select-year"></div>
+            <div class="aboluo-calendar-month">
+                <a class="aboluo-month-a-perv" href="javascript:;">&lt; </a>
+                <a class="aboluo-month-a-next" href="javascript:;"> &gt;</a>
+            </div>
+            <input type="button" class="aboluo-toToday" value="返回今天" />
+        </div>
+        <div class="aboluo-rilidiv">
+            <table class="aboluo-rilitable" cellspacing="0" cellpadding="0" >
+                <thead class="aboluo-rilithead">
+                <tr>
+                    <th>一</td>
+                    <th>二</td>
+                    <th>三</td>
+                    <th>四</td>
+                    <th>五</td>
+                    <th style="color:red;">六</td>
+                    <th style="color:red;">日</td>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="aboluo-rightdiv">
+        <p class="aboluo-xssj"><p>
+        <p class="aboluo-currday"></p>
+        <p class="aboluo-ssjjr"></p>
+        <p class="aboluo-xsmx"></p>
+    </div>
+</div>
+
+<!--日历js-->
+<script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/zzsc.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+.fwxm{ margin:0 0 0 0px;}
+.fwxm_js{ display:block; margin-left:8px;}
+.fwxm_list ul{ }
+.fwxm_list ul li{ float:left; display:inline; background:url(/images/fwxm_libg.jpg) no-repeat; width:362px; margin-bottom:20px; margin-right:23px;position:relative; height:104px;}
+.fwxm_img{ float:left; display:inline; margin:2px 3px; width:100px; height:100px;}
+.fwxm_img img{ display:block;}
+.fwxm_wz{ width:252px; float:right; display:inline; margin-top:14px}
+.fwxm_wz p{ width:192px; line-height:18px; color:#5a5a5a; padding-top:4px;}
+.jiahao{ text-align:right; position:absolute; bottom:1px; right:1px;}

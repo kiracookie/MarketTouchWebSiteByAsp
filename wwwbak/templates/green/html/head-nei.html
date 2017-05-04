@@ -1,0 +1,33 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link  rel="stylesheet" href="/images/style.css" />
+<script src="/images/jquery-1.7.2.min.js"></script>
+<script src="/images/jquery.easing.min.js"></script>
+<script src="/images/index.js"></script>
+<style>
+ .info_content ul{margin-left: 30px;}
+    .info_content ul li{list-style: disc;}
+</style>
+</head>
+<body class="list">
+        	<div class="header">
+            <div class="nav_form clearfix">
+                <h1 class="png"><a href="/" title=""><span>{aspcms:additiontitle}</span></a></h1>
+            	<div class="menu">
+                    <ul class="nav" id="nav">
+                         <li class="active"><a href="/">首&nbsp;&nbsp;页</a></li>
+            {aspcms:navlist}
+                            <li class=""><a href="[navlist:link]" title="">[navlist:name]</a>
+                                <ul class="smenu" style="top: 0px; display: none;">
+							  {aspcms:1navlist type=[navlist:sortid]}
+                                <li><a href="[1navlist:link]"><span>[1navlist:name]</span></a></li>
+						{/aspcms:1navlist}
+                                </ul>
+                            </li>
+                {/aspcms:navlist}
+                    </ul>
+                </div>
+               <div class="nav_right">
+                    <img src="/images/phone1.png" alt="">
+                </div> 
+            </div>
+        </div>

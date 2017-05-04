@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html>
+<head>
+<title>{aspcms:sorttitle}-{aspcms:sitetitle}</title>
+<meta name="Keywords" content="{aspcms:sortkeyword}" >
+<meta name="Description" content="{aspcms:sortdesc}" >
+<link href="/images/myls49.css" rel="stylesheet" type="text/css" />
+    {aspcms:template src=head-nei.html}
+<!-- 边栏悬浮 -->
+    {aspcms:template src=left.html}
+<div class="warp-container">
+    <div class="index-mainbody">
+        <div class="content">
+            <div class="position">
+                 您现在的位置：<a href="{aspcms:sitepath}{aspcms:languagepath}">首页</a>{aspcms:position} &gt; [position:link]{/aspcms:position}&nbsp;&raquo;&nbsp;
+            </div>
+            <div class="info_content">
+			<!--留言代码开始-->
+			<div class="active" id="messagelist">
+    {aspcms:gbooklist size=50 order=time}
+            <dl class="list-none metlist">
+<dt class="title"><span class="tt">[gbooklist:wdate style=yy-m-d]</span><span class="name">[gbooklist:name]</span><span class="time"> [gbooklist:title len=30]</span></dt>
+<dd class="info"><span class="tt">留言内容</span><span class="text">[gbooklist:winfo]</span></dd>
+<dd class="reinfo"><span class="tt">管理员回复</span><span class="text">[gbooklist:rinfo]</span></dd>
+</dl>
+    {/aspcms:gbooklist}
+					<div class="feed-cen">
+<form action="save.asp?action=add" method="post">
+						<div class="feed-wz">
+							<p class="tit1">如果您对我们有什么疑问，欢迎留言与我们联系！</p>
+							<ul>
+								<li style="list-style-type:none;">
+									<input type="radio" name="FaqTitle" value="网站抓取客服QQ软件">&nbsp;
+									网站抓取客服QQ软件
+								</li>
+								<li style="list-style-type:none;padding-left:20px;">
+									<input type="radio" name="FaqTitle" value="网站抓取客户手机号码软件">&nbsp;
+									网站抓取客户手机号码软件
+								</li>
+								<li style="list-style-type:none;padding-left:20px;">
+									<input type="radio" name="FaqTitle" value="产品代理合作咨询">&nbsp;
+									产品代理合作咨询
+								</li>
+								<li style="list-style-type:none;padding-left:20px;">
+									<input type="radio" name="FaqTitle" value="其它相关问题">&nbsp;
+									其它相关问题
+								</li>
+							</ul>
+							<p class="bg"><textarea id="cont2" name="Content" onblur="if(value==''){value='具体说明(字数勿大于800字)';style.color='#AFAFAF';$(this).parent().removeClass('nobg');}" onfocus="if(value=='具体说明(字数勿大于800字)'){value='';style.color='#666';$(this).parent().addClass('nobg');}" style="color: rgb(175, 175, 175);">具体说明(字数勿大于800字)</textarea></p>
+							<p class="tit1" style="height:50px;">
+								<span style="display:inline-block;height:32px;line-height:32px;float:left;">联系方式：</span>
+								<input maxlength="50" name="ContactWay" class="longtext" type="text" onblur="if(value==''){value='留下电话号码或邮箱地址。';style.color='#AFAFAF';}" onfocus="if(value=='留下电话号码或邮箱地址。'){value='';style.color='#666';}" value="留下电话号码或邮箱地址。" style="color: rgb(175, 175, 175);">
+								<span style="display:inline-block;height:32px;line-height:32px;float:left;">联系人：</span>
+								<input maxlength="50" name="Contact" class="longtext" type="text">
+							</p>
+							<p class="bt"><input type="submit" class="mybut but05" value="提交"></p>
+						</div>
+</form>
+					</div>
+
+        </div>
+			<!--留言代码结束-->
+            </div>
+        </div>
+    </div>
+  
+</div>
+{aspcms:foot}
+</body>
+</html>

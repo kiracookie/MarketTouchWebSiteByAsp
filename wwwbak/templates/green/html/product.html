@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>[content:title]-{aspcms:sortname}-{aspcms:sitetitle}</title>
+<meta name="Keywords" content="[content:keyword]" >
+<meta name="Description" content="[content:desc]" >
+    {aspcms:template src=head-nei.html}
+<!-- 边栏悬浮 -->
+    {aspcms:template src=left.html}
+<div class="warp-container">
+    <div class="index-mainbody">
+        <div class="content">
+            <div class="position">
+                 您现在的位置：<a href="{aspcms:sitepath}{aspcms:languagepath}">首页</a>{aspcms:position} > [position:link]{/aspcms:position}&#160;&#187;&#160;
+            </div>
+            <h1 class="info_title">[content:title]</h1><div class="text-center">作者：[content:author]    发布于：[content:date]  点击量：[content:visits]</div>
+            <hr class="info_title_line" />
+            <div class="info_content">
+			{aspcms:cimages count=10 contentid=[content:id]}
+			<img src='[cimages:src]'width="900"><br>
+			{/aspcms:cimages}<br>[content:info]
+            </div><div class="pagefoot">
+                <ul class="prev-next">
+                    <li class="prev">上一篇：{aspcms:prev} </li>
+                    <li class="next">下一篇：{aspcms:next}</li>
+                </ul>
+             
+                <a href="javascript:history.back();" class="page-back">返回</a>
+            </div>
+        </div>
+    </div>
+  
+</div>
+{aspcms:foot}
+</body>
+</html>

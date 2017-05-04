@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="MSHTML 6.00.3790.4807" name=GENERATOR>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Epic &mdash; Fully Responsive Free HTML5 Bootstrap Website Template by FREEHTML5.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5"/>
+    <meta name="keywords"
+          content="free html5, free template, free bootstrap, website template, html5, css3, mobile first, responsive"/>
+
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Roboto:400,300,700'
+          rel='stylesheet' type='text/css'>
+    <!-- Animate -->
+    <link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/animate.css">
+    <!-- Icomoon -->
+    <link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/bootstrap.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/style.css">
+
+    <!-- jQuery -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.waypoints.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/main.js"></script>
+
+
+    <!-- Modernizr JS -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/respond.min.js"></script>
+    <![endif]-->
+    <!--倒计时-->
+</head>
+<body>
+<!-- Loader -->
+<div class="fh5co-loader"></div>
+{aspcms:template src=logoTwo.html}
+<div id="fh5co-main" role="main">
+    <div class="container" style="text-align: center">
+        {aspcms:type sort={aspcms:sortid}}
+        <img src="[type:imagePath]" border="0" usemap="#planetmap" alt="Planets" width="100%"/>
+        {/aspcms:type}
+
+        <!--<map name="planetmap" id="planetmap">-->
+        <!--{aspcms:navlist type={aspcms:sortid}}-->
+        <!--<area shape="rect"-->
+        <!--coords="[navlist:desc]"-->
+        <!--href="[navlist:link]"-->
+        <!--target="_blank"-->
+        <!--alt="Sun"/>-->
+        <!--{/aspcms:navlist}-->
+        <!--</map>-->
+
+
+        <div class="row">
+
+            <div class="col-xs-6">
+                <table class="table" style="text-align: center;color: white">
+                    <thead>
+                    <tr>
+                        <th style="text-align: center">编号</th>
+                        <th style="text-align: center">店名</th>
+                        <th style="text-align: center">店主</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {aspcms:navlist type={aspcms:sortid} }
+                    {if:[navlist:i] mod 2=1}
+                    <script type="text/javascript">
+                        var text = '[navlist:pagetitle]' ? '[navlist:pagetitle]' : ',,,';
+                        var textt = text.split(",");
+                    </script>
+                    <tr>
+                        <td>
+                            <script>document.write(textt[0])</script>
+                        </td>
+                        <td>
+                            <a href='[navlist:link]'
+                               title='[navlist:pagetitle]'
+                               target='_self'>
+                                <script>document.write(textt[1])</script>
+                            </a>
+                        </td>
+                        <td>
+                            <script>document.write(textt[2])</script>
+                        </td>
+                    </tr>
+                    {end if}
+                    {/aspcms:navlist}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-6">
+                <table class="table" style="text-align: center;color: white">
+                    <thead>
+                    <tr>
+                        <th style="text-align: center">编号</th>
+                        <th style="text-align: center">店名</th>
+                        <th style="text-align: center">店主</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {aspcms:navlist type={aspcms:sortid}}
+                    {if:[navlist:i] mod 2=0}
+                    <script type="text/javascript">
+                        var text = '[navlist:pagetitle]' ? '[navlist:pagetitle]' : ',,,';
+                        var textt = text.split(",");
+                    </script>
+                    <tr>
+                        <td>
+                            <script>document.write(textt[0])</script>
+                        </td>
+                        <td>
+                            <a href='[navlist:link]'
+                               title='[navlist:pagetitle]'
+                               target='_self'>
+                                <script>document.write(textt[1])</script>
+                            </a>
+                        </td>
+                        <td>
+                            <script>document.write(textt[2])</script>
+                        </td>
+                    </tr>
+                    {end if}
+                    {/aspcms:navlist}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+

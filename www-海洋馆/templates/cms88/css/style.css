@@ -1,0 +1,27 @@
+
+
+.postlist {
+	MARGIN: 15px 0px 0px
+}
+.postlist LI {
+	PADDING-LEFT: 12px; BACKGROUND: url(../images/arrow.gif) no-repeat 0px 14px; FLOAT: left; WIDTH: 640px; LINE-HEIGHT: 32px; BORDER-BOTTOM: #ddd 1px dashed; HEIGHT: 32px
+}
+.postlist LI H3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; FLOAT: left; WIDTH: 500px
+}
+.postlist LI SPAN {
+	FLOAT: right; WIDTH: 80px; COLOR: #666; TEXT-ALIGN: right
+}
+.productlist {
+	MARGIN-TOP: 20px
+}
+.productlist LI {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 5px 0px 10px; OVERFLOW: hidden; WIDTH: 205px; PADDING-TOP: 0px; HEIGHT: 190px
+}
+.productlist LI a{color:#333333; padding-top:5px;}
+.productlist LI IMG {
+	BORDER-RIGHT: #e4e4e4 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #e4e4e4 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #e4e4e4 1px solid; WIDTH: 200px; PADDING-TOP: 2px; BORDER-BOTTOM: #e4e4e4 1px solid; HEIGHT: 160px
+}
+.productlist LI .product_name {
+	DISPLAY: block; OVERFLOW: hidden; WIDTH: 200px; LINE-HEIGHT: 15px; HEIGHT: 15px; TEXT-ALIGN: center
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{aspcms:sorttitle}-{aspcms:sitetitle}</title>
+<meta name="Keywords" content="{aspcms:sortkeyword}" >
+<meta name="Description" content="{aspcms:sortdesc}" >
+<link type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/base.css" rel="stylesheet" />
+<LINK media=screen href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/style.css" type=text/css rel=stylesheet>
+<LINK media=all href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/pagenavi-css.css" type=text/css rel=stylesheet>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /></head>
+<body>
+<div class="wrap">
+    {aspcms:top}
+  <div class="mid">
+    <div class="banner"> <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/banner.jpg" width="990" height="277" /></div>
+    <div class="left">
+      <div  class="leftin">
+       
+        <div class="lb">
+          <div class="t1"> <em>{aspcms:type sort={aspcms:topsortid}}[type:name]{/aspcms:type}</em><span></span> </div>
+          <div class="cate">
+            <ul>
+			{aspcms:navlist type={aspcms:topsortid}}
+            <li><a href="[navlist:link]">[navlist:name]</a></li>
+            {/aspcms:navlist}
+            </ul>
+          </div>
+        </div>
+         <div class="lb">
+		<a href="/list/?124_1.html"><img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/zt.gif" width="214" height="90"  class="imga"/></a> 
+		<a href="/about/?107.html" > <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/lx.gif" width="213" height="72" class="imga"/></a> 
+		</div>
+        <div class="lb fl">
+        <select name="" onChange="javascript:window.open(this.options[this.selectedIndex].value)">
+            <option>友情链接</option>
+			{aspcms:linklist  type=font}
+			<option value="[linklist:link]">[linklist:name]</option>
+			{/aspcms:linklist}
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+       <div class="t1"> <em>{aspcms:sortname}</em><span></span> </div>
+       <div class="cbox">
+     <UL class=postlist>
+         {aspcms:list size=20 order=id} 
+         <LI><H3><A href="[list:link]" title="[list:title]" {if:[list:isoutlink]} target="_blank"{end if}><font color="[list:titlecolor]">[list:title len=50]</font></A></H3><SPAN>[list:date style=yy-m-d]</SPAN></LI>
+           {/aspcms:list}          
+        </UL>
+       </div>
+	     <DIV class=pageNavi style="float:left; text-align:center; padding-top:10px; padding-bottom:10px; width:750px;"><DIV class=wp-pagenavi>[list:pagenumber len=5]</DIV></DIV>
+    </div>
+    <div class="clear"></div>
+  </div>
+{aspcms:foot}
+</div>
+</body>
+</html>

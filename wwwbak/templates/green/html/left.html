@@ -1,0 +1,35 @@
+
+            <div class="cleft" id="cleft">
+                <ul class="clnav clearfix" id="clnav">
+                    <li class="current">{aspcms:type sort=2}[type:name]{/aspcms:type}</li>
+                    <li>{aspcms:type sort=3}[type:name]{/aspcms:type}</li>
+                    <li>{aspcms:type sort=4}[type:name]{/aspcms:type}</li>
+                </ul>
+                <div id="clcontents">
+                     <div class="dis-block conts">
+                        <ul>
+				   {aspcms:content sort=2 num=7 order=id}
+                            <li><a href="[content:link]" title="[content:title]">[content:title len=20]</a></li>
+                    {/aspcms:content} 
+                            <li class="more" id="clcmore"><a href="/list/?2_1.html">查看更多</a></li>
+                        </ul>
+                     </div>
+                     <div class="conts">
+                        <ul>
+				   {aspcms:content sort=3 num=7 order=id}
+                            <li><a href="[content:link]" title="[content:title]">[content:title len=20]</a></li>
+                    {/aspcms:content} 
+                            <li class="more" id="clcmore"><a href="/list/?3_1.html">查看更多</a></li>
+                        </ul>
+                     </div>
+                     <div class="conts">
+                        <ul>
+				   {aspcms:content sort=4 num=7 order=id}
+                            <li><a href="[content:link]" title="[content:title]">[content:title len=20]</a></li>
+                    {/aspcms:content} 
+                            <li class="more" id="clcmore"><a href="/list/?4_1.html">查看更多</a></li>
+                        </ul>
+                     </div>
+                </div>
+                <img src="/images/clbutton1.png" class="clbutton" id="clbutton">
+            </div>

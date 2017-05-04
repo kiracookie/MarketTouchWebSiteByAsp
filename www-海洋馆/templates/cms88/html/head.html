@@ -1,0 +1,17 @@
+  <div class="top">
+    <div class="topbanner"> <a href="{aspcms:sitepath}/" id="home" title="Ê×Ò³"></a> </div>
+    <div class="menu">
+      <ul>
+        <li> <a href="{aspcms:sitepath}{aspcms:languagepath}">Ê×  Ò³</a></li>
+		 {aspcms:navlist}
+        <li><a href="[navlist:link]">[navlist:name]</a></li>
+         {/aspcms:navlist}
+      </ul>
+      <div class="search">
+	  <FORM action="{aspcms:sitepath}{aspcms:languagepath}search.asp" method="post">
+        <input type="submit" class="gosearch"  value=" "/>
+        <input type="text" name="keys" class="key"/>
+		 </FORM>
+      </div>
+    </div>
+  </div>

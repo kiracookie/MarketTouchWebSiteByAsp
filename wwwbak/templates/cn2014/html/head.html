@@ -1,0 +1,33 @@
+<header>
+  <div class="inner">
+    <div class="top-logo inner"> <a href="/" title="{aspcms:sitetitle}" id="web_logo"> <img src="{aspcms:sitelogo}" alt="{aspcms:sitetitle}" title="{aspcms:sitetitle}" style="margin:15px 0px 0px 0px;" /> </a>
+      <ul class="top-nav list-none">
+        <li class="t"><a href='#' onclick='SetHome(this,window.location,"非IE浏览器不支持此功能，请手动设置！");' style='cursor:pointer;' title='设为首页'  >设为首页</a><span>|</span><a href='#' onclick='addFavorite("非IE浏览器不支持此功能，请手动设置！");' style='cursor:pointer;' title='收藏本站'  >收藏本站</a></li>
+        <li class="b">
+          <p> <strong><span style="font-size:14px;">客服热线：{aspcms:companyphone}</span></strong></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <nav>
+    <div class="inner">
+      <ul class="list-none">
+        <li id="nav_10001" style='width:97px;'><a href='/' title='首页' class='nav'><span>首页</span></a></li>
+        {aspcms:navlist}
+        <li class="line"></li>
+        <li id='nav_[navlist:sortid]' style='width:97px;' ><a href='[navlist:link]' title='[navlist:name]' class='hover-none nav'><span>[navlist:name]</span></a>
+          {if:[navlist:subcount]>0}
+          <dl>
+          	{aspcms:1navlist type=[navlist:sortid]}
+            <dd><a href='[1navlist:link]' title='[1navlist:name]' >[1navlist:name]</a></dd>
+            {/aspcms:1navlist}
+            
+          </dl>
+          {end if}
+        </li>
+        {/aspcms:navlist}
+        
+      </ul>
+    </div>
+  </nav>
+</header>
