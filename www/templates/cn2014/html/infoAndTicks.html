@@ -83,38 +83,20 @@
     <script type="text/javascript">
         var contentList={};
         {aspcms:content sort={aspcms:sortid}}
-        contentList[[content:title]]="[content:imagePath]";
+        contentList[[content:source]]="[content:imagePath]";
         {/aspcms:content}
+        $(function () {
+            if(!imagePaths)
+                changeMarquee({aspcms:content sort={aspcms:sortid} num=1}
+            contentList[[content:source]]
+            {/aspcms:content},"marqueeItem");
+        })
     </script>
-
 </head>
 <body>
 <!-- Loader -->
 <div class="fh5co-loader"></div>
 {aspcms:template src=logoTwo.html}
-<div id="fh5co-main" role="main">
-    <div class="container">
-        {aspcms:type sort={aspcms:sortid}}
-            <script type="text/javascript">
-                var imagePaths = '[type:imagePath]' ? '[type:imagePath]' : '';
-                var imagePathAr = imagePaths.split('|');
-            </script>
-        {/aspcms:type}
-        <div id="myCarousel" class="carousel slide">
-            <!-- 轮播（Carousel）指标 -->
-            <!-- 轮播（Carousel）项目 -->
-            <div class="carousel-inner" id="marqueeItem">
-                <script type="text/javascript">
-                    for (var i = 0; i < imagePathAr.length; i++) {
-                        document.write('<div class="item"><img src="' + imagePathAr[i] + '"/></div>');
-                    }
-                </script>
-            </div>
-        </div>
-
-    </div>
-</div>
-
 <div class="aboluo-w-700">
     <div class="aboluo-leftdiv" style="background-color: white">
         <div class="aboluo-tools">
@@ -156,6 +138,29 @@
         <p class="aboluo-xsmx"></p>
     </div>
 </div>
+<div id="fh5co-main" role="main">
+    <div class="container">
+        {aspcms:type sort={aspcms:sortid}}
+            <script type="text/javascript">
+                var imagePaths = '[type:imagePath]' ? '[type:imagePath]' : '';
+                var imagePathAr = imagePaths.split('|');
+            </script>
+        {/aspcms:type}
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner" id="marqueeItem">
+                <script type="text/javascript">
+                    for (var i = 0; i < imagePathAr.length; i++) {
+                            document.write('<div class="item"><img src="' + imagePathAr[i] + '"/></div>');
+                    }
+                </script>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 
 <!--日历js-->
 <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/zzsc.js"></script>

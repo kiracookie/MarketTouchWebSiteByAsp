@@ -17,10 +17,13 @@ function startMarquee() {
 
 function changeMarquee(pics, id) {
     var picList = pics.split("|");
-    var html;
+    var html = "";
     for (var i = 0; i < picList.length; i++) {
         html += '<div class="item"><img src="' + picList[i] + '"/></div>';
     }
-    $("#" + id).html(html);
+    // $("#" + id).fadeOut("normal", function () {
+        $("#" + id).html(html);
+    // });
+
     startMarquee();
 }
