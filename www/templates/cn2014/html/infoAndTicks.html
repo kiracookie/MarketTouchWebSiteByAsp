@@ -94,6 +94,7 @@
                 },
 
             });
+            var contentList=[{aspcms:content sort={aspcms:sortid}}{"id":"[content:id]", "title":"[content:title]", "date":"[content:date style=yy-m-d]", "des":"[content:desc]", "link":"[content:link]"},{/aspcms:content}]
         });
     </script>
 
@@ -104,14 +105,12 @@
 {aspcms:template src=logoTwo.html}
 <div id="fh5co-main" role="main">
     <div class="container">
-        {aspcms:navlist num=1 type={aspcms:sortid}}
-        {aspcms:content sort=[navlist:sortid]}
-        <script type="text/javascript">
-            var imagePaths = '[content:imagePath]' ? '[content:imagePath]' : '';
-            var imagePathAr = imagePaths.split('|');
-        </script>
-        {/aspcms:content}
-        {/aspcms:navlist}
+        {aspcms:type sort={aspcms:sortid}}
+            <script type="text/javascript">
+                var imagePaths = '[type:imagePath]' ? '[type:imagePath]' : '';
+                var imagePathAr = imagePaths.split('|');
+            </script>
+        {/aspcms:type}
         <div id="myCarousel" class="carousel slide">
             <!-- 轮播（Carousel）指标 -->
             <!-- 轮播（Carousel）项目 -->
