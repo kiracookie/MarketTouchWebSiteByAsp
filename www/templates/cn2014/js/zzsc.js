@@ -14,6 +14,10 @@ $(function () {
     // setRigth(new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDate());
 });
 
+
+
+
+
 //阻止冒泡
 function stopBubble(e) {
     if (e && e.stopPropagation) {// 别的浏览器
@@ -326,8 +330,9 @@ function setRigth(year, yue, day) {
     setaclass(year, yue, day);
 
     //增加自定义事件 2017年5月4日21:31:15 kiracookie
-    // alert(year + "-" + yue + "-" + (day.length == 1 ? "0" + day : day));
-
+    var data = contentList[year + (yue.length == 1 ? "0" + yue : yue) + (day.length == 1 ? "0" + day : day)];
+    if (data)
+        changeMarquee(data, "marqueeItem");
 
 }
 
@@ -669,4 +674,5 @@ function aboluoSetrq() {
             alert("设置失败");
         }
     });
+
 }
