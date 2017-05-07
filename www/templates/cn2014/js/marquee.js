@@ -19,7 +19,7 @@ function changeMarquee(pics, id) {
     var picList = pics.split("|");
     var html = "";
     for (var i = 0; i < picList.length; i++) {
-        html += '<div class="item"><img src="' + picList[i] + '"/></div>';
+        html += '<div class="item"><p style="text-align: center;"><img src="' + picList[i] + '"/></p></div>';
     }
     // $("#" + id).fadeOut("normal", function () {
         $("#" + id).html(html);
