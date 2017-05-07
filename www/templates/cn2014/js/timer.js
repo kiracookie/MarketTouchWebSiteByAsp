@@ -1,5 +1,5 @@
 $(function () {
-    var waitTime = 1000 * 60 * 1;//分钟
+    var waitTime = 1000 * 60 * 0.5;//分钟
     var startTime = endTime = new Date();
     var Timer = window.setInterval(function () {
         endTime = new Date();
