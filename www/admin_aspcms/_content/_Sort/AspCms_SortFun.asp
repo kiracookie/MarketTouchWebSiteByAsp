@@ -331,20 +331,25 @@ Sub addSort
 	IcoImage = getForm("IcoImage","post")
 	ImagePath = getForm("ImagePath","post")
 	if isnul(SortName) then alertMsgAndGo "分类名称不能为空","-1"
-	
-	conn.exec "insert into {prefix}Sort(ParentID, SortOrder, SortType, SortName,SortEnName, SortURL, PageTitle, PageKeywords, PageDesc, SortTemplate, ContentTemplate, SortFolder, ContentFolder, SortFileName, ContentFileName, SortStatus, SortContent, LanguageID, AddTime, GroupID, Exclusive,indeximage,IcoImage,ImagePath) values("&ParentID&", "&SortOrder&", "&SortType&", '"&SortName&"','"&SortEnName&"', '"&SortURL&"', '"&PageTitle&"', '"&PageKeywords&"', '"&PageDesc&"', '"&SortTemplate&"', '"&ContentTemplate&"', '"&SortFolder&"', '"&ContentFolder&"', '"&SortFileName&"', '"&ContentFileName&"', "&SortStatus&", '"&Content&"', "&LanguageID&", '"&AddTime&"', "&GroupID&", '"&Exclusive&"','"&indeximage&"','"&IcoImage&"','"&ImagePath&"')", "exe" 	
-	SortID=Conn.Exec("select @@identity","r1")(0)
-	if ParentID="0" then 
-		SortLevel="1"
-		TopSortID=SortID
-		SortPath = TopSortID&","
-	else
-		dim rs 	: set rs=Conn.Exec("select SortLevel, TopSortID, SortPath from {prefix}Sort where SortID="&ParentID,"r1")
-		SortLevel=rs(0)+1
-		TopSortID=rs(1)
-		SortPath=rs(2)&SortID&","
-	end if
-	conn.exec "update {prefix}Sort set SortLevel="&SortLevel&", TopSortID="&TopSortID&", SortPath='"&SortPath&"' where SortID="&SortID, "exe"	
+'增加循环 2017年6月14日23:07:47 by KiraCookie
+    if Instr(ParentID,",")<=0 then ParentID=ParentID&","&ParentID end if
+    dim ParentIDs
+    ParentIDs=split(ParentID,",")
+    for ParentID=ParentIDs(0) to ParentIDs(1)
+        conn.exec "insert into {prefix}Sort(ParentID, SortOrder, SortType, SortName,SortEnName, SortURL, PageTitle, PageKeywords, PageDesc, SortTemplate, ContentTemplate, SortFolder, ContentFolder, SortFileName, ContentFileName, SortStatus, SortContent, LanguageID, AddTime, GroupID, Exclusive,indeximage,IcoImage,ImagePath) values("&ParentID&", "&SortOrder&", "&SortType&", '"&SortName&"','"&SortEnName&"', '"&SortURL&"', '"&PageTitle&"', '"&PageKeywords&"', '"&PageDesc&"', '"&SortTemplate&"', '"&ContentTemplate&"', '"&SortFolder&"', '"&ContentFolder&"', '"&SortFileName&"', '"&ContentFileName&"', "&SortStatus&", '"&Content&"', "&LanguageID&", '"&AddTime&"', "&GroupID&", '"&Exclusive&"','"&indeximage&"','"&IcoImage&"','"&ImagePath&"')", "exe"
+        SortID=Conn.Exec("select @@identity","r1")(0)
+        if ParentID="0" then
+            SortLevel="1"
+            TopSortID=SortID
+            SortPath = TopSortID&","
+        else
+            dim rs 	: set rs=Conn.Exec("select SortLevel, TopSortID, SortPath from {prefix}Sort where SortID="&ParentID,"r1")
+            SortLevel=rs(0)+1
+            TopSortID=rs(1)
+            SortPath=rs(2)&SortID&","
+        end if
+        conn.exec "update {prefix}Sort set SortLevel="&SortLevel&", TopSortID="&TopSortID&", SortPath='"&SortPath&"' where SortID="&SortID, "exe"
+	Next
 	alertMsgAndGo "添加成功","AspCms_Sort.asp"
 End Sub
 
