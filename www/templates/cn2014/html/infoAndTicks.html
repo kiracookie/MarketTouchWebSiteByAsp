@@ -82,8 +82,10 @@
 
     <script type="text/javascript">
         var contentList={};
-        {aspcms:content sort={aspcms:sortid}}
-        contentList[[content:source]]="[content:imagePath]";
+        {aspcms:content sort={aspcms:sortid} num=999}
+            if("[content:source]"){
+                eval('contentList[[content:source]]="[content:imagePath]"');
+            }
         {/aspcms:content}
         $(function () {
             if(!imagePaths)
